@@ -29,7 +29,7 @@ export default function App() {
 }
 
 function Accordion() {
-  return <div className="content-box accordion">
+  return <div className="content-box  accordion">
     <ul >
         {
         faqs.map((faq)=>(
@@ -42,7 +42,7 @@ function Accordion() {
 function AccordionItem({num,title,text}){
   const [button,setbutton]=useState("+");
   return (
-   <div className={`${button === '-' ? 'open item' : 'x item'}`} onClick={()=>button ==="+" ?setbutton("-") :setbutton("+")}>
+   <div className={`${button === '-' ? 'open item accordion' : 'x accordion item'}`} onClick={()=>button ==="+" ?setbutton("-") :setbutton("+")}>
 
         <p className="number">{num}</p>
         <p className="title">{title}</p>
